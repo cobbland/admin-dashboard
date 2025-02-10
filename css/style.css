@@ -173,10 +173,6 @@ img, picture, video, canvas, svg {
     grid-row: 4 / 5;
 }
 
-.projects {
-    grid-row: 2 / -1;
-}
-
 .announcements {
     grid-row: 2 / 3;
 }
@@ -186,8 +182,48 @@ img, picture, video, canvas, svg {
 }
 
 .announcements,
-.trending {
+.trending,
+.project-card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #00000022;
+    padding: 20px;
+}
+
+/* Projects */
+
+.projects {
+    grid-row: 2 / -1;
+    padding-right: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+    border-left: 10px solid #F0B429;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.project-icons {
+    justify-self: end;
+}
+
+.project-icons svg {
+    display: inline;
+    margin: 10px 10px 0px;
+    fill: #000000bb;
+    transition: 0.3s;
+}
+
+.project-icons svg:hover {
+    fill: #1992D4;
+    cursor: pointer;
 }
