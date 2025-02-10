@@ -60,7 +60,7 @@ img, picture, video, canvas, svg {
 .main-pane {
     padding: 40px;
     display: grid;
-    grid-template-rows: 30px minmax(300px, 1fr) 10px 30px minmax(300px, 1fr);
+    grid-template-rows: 30px 400px 10px 30px 400px max-content;
     grid-template-columns: 1fr 250px;
     gap: 10px;
 }
@@ -146,6 +146,10 @@ img, picture, video, canvas, svg {
     justify-self: end;
 }
 
+.user-section div {
+    transition: 0.3s;
+}
+
 .user-section > img {
     height: 30px;
     border-radius: 50%;
@@ -181,6 +185,12 @@ img, picture, video, canvas, svg {
     text-align: center;
     padding: 10px 2px;
     font-weight: 700;
+    transition: 0.3s;
+}
+
+.greet li:hover {
+    background-color: #1992D4bb;
+    cursor: pointer;
 }
 
 /* main-pane */
@@ -205,6 +215,27 @@ img, picture, video, canvas, svg {
 
 .announcements {
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    gap: 5px;
+}
+
+.announcement {
+    border-top: 2px solid #00000022;
+    padding: 10px 0;
+}
+
+.announcements .announcement:first-child {
+    border-top: 0;
+}
+
+.announcement-title {
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.announcement-content {
+    color: #00000099;
 }
 
 .trending {
@@ -228,7 +259,7 @@ img, picture, video, canvas, svg {
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 400px));
 }
 
 .project-card {
@@ -240,6 +271,7 @@ img, picture, video, canvas, svg {
 .project-title {
     font-weight: 700;
     font-size: 1.1em;
+    transition: 0.3s;
 }
 
 .project-icons {
@@ -253,7 +285,13 @@ img, picture, video, canvas, svg {
     transition: 0.3s;
 }
 
-.project-icons svg:hover {
+.project-icons svg:hover,
+.project-title:hover,
+.user-section div:hover,
+.user-section img:hover,
+label:hover,
+.announcement-title:hover {
     fill: #1992D4;
+    color: #1992D4;
     cursor: pointer;
 }
