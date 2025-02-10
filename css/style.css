@@ -60,7 +60,7 @@ img, picture, video, canvas, svg {
 .main-pane {
     padding: 40px;
     display: grid;
-    grid-template-rows: 30px 400px 10px 30px 400px max-content;
+    grid-template-rows: 30px max-content 10px 30px max-content max-content;
     grid-template-columns: 1fr 250px;
     gap: 10px;
 }
@@ -240,6 +240,24 @@ img, picture, video, canvas, svg {
 
 .trending {
     grid-row: 5 / 6;
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    gap: 15px;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    gap: 10px;
+}
+
+.user-name {
+    transition: 0.3s;
+}
+
+.tagline {
+    color: #00000099;
 }
 
 .announcements,
@@ -290,7 +308,8 @@ img, picture, video, canvas, svg {
 .user-section div:hover,
 .user-section img:hover,
 label:hover,
-.announcement-title:hover {
+.announcement-title:hover,
+.user-name:hover {
     fill: #1992D4;
     color: #1992D4;
     cursor: pointer;
