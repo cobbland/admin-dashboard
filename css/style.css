@@ -68,12 +68,14 @@ img, picture, video, canvas, svg {
 /* Side pane */
 
 .logo {
+    font-family: 'Pirata One', display;;
     font-size: 1.5em;
     font-weight: 700;
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 20px;
     align-items: center;
+    transition: 0.3s;
 }
 
 .side-pane ul,
