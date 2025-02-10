@@ -32,7 +32,7 @@ img, picture, video, canvas, svg {
     height: 100%;
     display: grid;
     grid-template-rows: max-content 1fr;
-    grid-template-columns: 275px 1fr;
+    grid-template-columns: max-content 1fr;
 }
 
 .side-pane {
@@ -70,6 +70,10 @@ img, picture, video, canvas, svg {
 .logo {
     font-size: 1.5em;
     font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 20px;
+    align-items: center;
 }
 
 .side-pane ul,
@@ -77,6 +81,32 @@ img, picture, video, canvas, svg {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.side-pane li {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.side-pane li:hover,
+.side-pane svg:hover,
+.logo:hover {
+    fill: #ffffffcc;
+    color: #ffffffcc;
+    cursor: pointer;
+}
+
+.side-pane svg {
+    display: inline;
+    fill: white;
+}
+
+.side-pane p {
+    display: inline;
 }
 
 /* Top pane */
